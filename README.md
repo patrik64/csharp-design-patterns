@@ -2,7 +2,7 @@
 
 examples from a fantastic [refactoring guru](https://refactoring.guru/design-patterns) website
 
-to run you can use [mono]([https://deno.land/](https://www.mono-project.com/))
+to run you can use [mono](https://www.mono-project.com/)
 
 e.g.
 
