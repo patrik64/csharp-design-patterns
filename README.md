@@ -6,7 +6,7 @@ to run on ubuntu:
 
 ```
 cd behavioral
-css -out:22-visitor 22-visitor.cs
+csc -out:22-visitor 22-visitor.cs
 chmod +x 22-visitor
 ./22-visitor
 ```
