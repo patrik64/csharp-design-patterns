@@ -2,11 +2,10 @@
 
 examples from a fantastic [refactoring guru](https://refactoring.guru/design-patterns) website
 
-to run on ubuntu:
+to run:
 
 ```
 cd behavioral
-csc -out:22-visitor 22-visitor.cs
-chmod +x 22-visitor
-./22-visitor
+cd 22-visitor
+dotnet run
 ```
