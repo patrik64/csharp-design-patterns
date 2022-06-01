@@ -95,15 +95,15 @@ namespace RefactoringGuru.DesignPatterns.Flyweight.Conceptual
 
     public class Car
     {
-        public string Owner { get; set; }
+        public string Owner { get; set; } = default!;
 
-        public string Number { get; set; }
+        public string Number { get; set; } = default!;
 
-        public string Company { get; set; }
+        public string Company { get; set; } = default!;
 
-        public string Model { get; set; }
-
-        public string Color { get; set; }
+        public string Model { get; set; } = default!;
+ 
+        public string Color { get; set; } = default!;
     }
 
     class Program
