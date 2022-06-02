@@ -66,7 +66,7 @@ namespace RefactoringGuru.DesignPatterns.Flyweight.Conceptual
 
         // Returns an existing Flyweight with a given state or creates a new
         // one.
-        public Flyweight GetFlyweight(Car sharedState)
+        public Flyweight? GetFlyweight(Car sharedState)
         {
             string key = this.getKey(sharedState);
 
@@ -79,7 +79,10 @@ namespace RefactoringGuru.DesignPatterns.Flyweight.Conceptual
             {
                 Console.WriteLine("FlyweightFactory: Reusing existing flyweight.");
             }
-            return this.flyweights.Where(t => t.Item2 == key).FirstOrDefault().Item1;
+            var f = this.flyweights.Where(t => t.Item2 == key).FirstOrDefault();
+            if(f is not null)
+                return f.Item1;
+            return null;
         }
 
         public void listFlyweights()
@@ -152,7 +155,10 @@ namespace RefactoringGuru.DesignPatterns.Flyweight.Conceptual
 
             // The client code either stores or calculates extrinsic state and
             // passes it to the flyweight's methods.
-            flyweight.Operation(car);
+            if(flyweight is not null) 
+            {
+                flyweight.Operation(car);
+            }
         }
     }
 }
